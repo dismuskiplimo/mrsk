@@ -1,0 +1,100 @@
+/**
+ * social-icons.scss
+ * Governs the general look and feel of Social Icons sections.
+ */
+
+/**
+ * Imports
+ */
+@import 'socicon';
+
+/**
+ * Styling begins
+ */
+.social-icons-lists {
+
+	.socicon {
+		position: relative;
+		top: 3px;
+		padding: 10px;
+		font-size: 16px;
+		display: inline-block;
+		box-sizing: content-box;
+	}
+
+	li.social-icons-list-item {
+		margin: 4px;
+		padding: 0 !important;
+		display: inline-block;
+		border: none !important;
+		list-style: none !important;
+
+		a.social-icon {
+			text-decoration: none;
+
+			&:focus,
+			&:active {
+				outline: none;
+			}
+
+			&:hover .socicon {
+				opacity: 0.8;
+			}
+
+			span.social-icons-list-label {
+				margin-left: 4px;
+			}
+		}
+
+		&::before,
+		&::after {
+			visibility: hidden;
+		}
+	}
+
+	&.show-icons-label {
+		list-style: outside;
+	}
+
+	&.icons-background-rounded .socicon {
+		border-radius: 100%;
+	}
+
+	&.icons-background-square,
+	&.icons-background-rounded {
+
+		.socicon {
+			color: #fff;
+		}
+
+		&.centre {
+			padding: 0;
+			text-align: center;
+		}
+	}
+
+	&.icons-background-none {
+
+		.socicon {
+			padding: 0;
+			background: transparent;
+		}
+	}
+}
+
+.widget .social-icons-lists {
+
+	&.show-icons-label {
+		li.social-icons-list-item {
+			display: block;
+		}
+
+		&.icons-background-square,
+		&.icons-background-rounded {
+
+			&.centre {
+				text-align: left;
+			}
+		}
+	}
+}

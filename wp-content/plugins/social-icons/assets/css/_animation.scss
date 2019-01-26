@@ -1,0 +1,9 @@
+/**
+ * _animation.scss
+ * Custom Social Icons Animations.
+ */
+@keyframes spin {
+	100% {
+		transform: rotate( 360deg );
+	}
+}
